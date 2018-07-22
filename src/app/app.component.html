@@ -1,0 +1,84 @@
+<div id="page-wrapper">
+    <button mat-mini-fab class="btnInfo expand" color="primary">
+        <mat-icon aria-label="Example icon-button with a heart icon">phone</mat-icon>
+        Contactanos
+    </button>
+    <header>
+      <div class="logo" [ngClass]="{'alternative': option == 2}">
+        <svg class="image" version="1.1" viewBox="0 0 135.47 135.47" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0 -161.53)" stroke-width=".26458px">
+            <path class="left" d="m66.146 168.06-42.333 61.031 42.333 61.207-28.222-61.207z"/>
+            <path class="bottom" transform="matrix(.26458 0 0 .26458 0 161.53)" d="m174 266.87 81.893 182.74v1.7266l0.38672-0.86328 0.38672 0.86328v-1.7266l81.893-182.74h-32l-50.279 116.24-50.279-116.24h-32z"/>
+            <path class="top" d="m67.705 177.35v0.45682l-21.667 48.349h8.4667l13.303-30.754 13.303 30.754h8.4667l-21.667-48.349v-0.45682l-0.10232 0.22841z"/> 
+            <path class="center" d="m67.705 206.69v0.49971l-8.9674 21.902 8.9674 20.867v0.47594l0.10232-0.23823 0.10232 0.23823v-0.47594l8.9674-20.867-8.9674-21.902v-0.49971l-0.10232 0.25012z"/>
+            <path class="right" d="m69.469 168.06 42.333 61.031-42.333 61.207 28.222-61.207z"/>
+          </g>
+        </svg>
+        <svg class="name" version="1.1" viewBox="0 0 67.733 39.688" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0 -257.31)">
+           <g transform="matrix(1.679 0 0 1.7586 -4.0536 -199.78)" font-size="10.583px" letter-spacing="0px" stroke-width=".26458" word-spacing="0px">
+            <text x="2.4308007" y="274.46832" style="line-height:1.25"><tspan x="2.4308007" y="274.46832" stroke-width=".26458">OS</tspan></text>
+            <text transform="scale(-1,1)" x="-22.54862" y="274.46835" style="line-height:1.25"><tspan x="-22.54862" y="274.46835" stroke-width=".26458">B</tspan></text>
+            <text x="22.189474" y="274.46832" style="line-height:1.25"><tspan x="22.189474" y="274.46832" stroke-opacity=".96482" stroke-width=".26458">BOR</tspan></text>
+           </g>
+          </g>
+        </svg>         
+      </div>
+      <nav id="menu"></nav>      
+    </header>    
+    <section id="banner">
+      <div *ngIf="option == 1 || next == 1" class="Option" [ngClass]="{'select black': option == 1,'next red2': next == 1}">
+        <img src="../assets/images/option1.jpg"/>
+        <div class="OptionContent">
+          <div class="Title">
+            <span>Somos tu Tecnología</span>
+          </div>
+          <div class="Content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis consequat accumsan. Donec ornare velit turpis, et consequat lacus sollicitudin id. Ut nec nunc finibus, accumsan justo ac, pulvinar purus. 
+                  Sed dictum mauris ac sollicitudin sollicitudin.</p>
+          </div>
+        </div>              
+      </div>
+      <div *ngIf="option == 2 || next == 2" class="Option" [ngClass]="{'select red': option == 2,'next red2': next == 2}">
+        <img src="../assets/images/option3.jpg"/>
+        <div class="OptionContent">
+            <div class="Title">
+                <span>Titulo 2</span>
+            </div>
+            <div class="Content">
+                <p>Cras mattis enim nec eros scelerisque posuere. Donec imperdiet velit non massa tincidunt imperdiet. Suspendisse tincidunt aliquet leo maximus mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet tempus justo. 
+                    Sed accumsan vulputate nibh, id elementum nibh. Integer consequat, mauris quis condimentum tempus, neque massa feugiat massa, eu sodales nisl est eu tellus. Aliquam erat volutpat. Aenean ultrices gravida feugiat. 
+                    Etiam eleifend turpis non sem lacinia dignissim. Vestibulum faucibus interdum purus, ac fermentum est ornare at. Aenean semper elit eu sollicitudin tristique. 
+                    Pellentesque sollicitudin, purus sed bibendum elementum, urna risus dignissim felis, eget elementum velit odio eget purus. Aenean id condimentum diam, ut sodales lacus.</p>
+            </div>
+        </div>
+      </div>
+      <div *ngIf="option == 3 || next == 3" class="Option" [ngClass]="{'select black ': option == 3,'next black2 ': next == 3}">
+        <img src="../assets/images/option2.jpg"/>
+        <div class="OptionContent">
+            <div class="Title">
+                <span>Titulo 3</span>
+            </div>
+            <div class="Content">
+                <p>Cras mattis enim nec eros scelerisque posuere. Donec imperdiet velit non massa tincidunt imperdiet. Suspendisse tincidunt aliquet leo maximus mattis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet tempus justo. 
+                    Sed accumsan vulputate nibh, id elementum nibh. Integer consequat, mauris quis condimentum tempus, neque massa feugiat massa, eu sodales nisl est eu tellus. Aliquam erat volutpat. Aenean ultrices gravida feugiat. 
+                    Etiam eleifend turpis non sem lacinia dignissim. Vestibulum faucibus interdum purus, ac fermentum est ornare at. Aenean semper elit eu sollicitudin tristique. 
+                    Pellentesque sollicitudin, purus sed bibendum elementum, urna risus dignissim felis, eget elementum velit odio eget purus. Aenean id condimentum diam, ut sodales lacus.</p>
+            </div>
+        </div>
+      </div>
+      <div class="Actions">
+          <div class="rombo" [ngClass]="{'select': option == 1}" (click)="changePanel(1)"></div>
+          <div class="rombo" [ngClass]="{'select': option == 2}" (click)="changePanel(2)"></div>
+          <div class="rombo" [ngClass]="{'select': option == 3}" (click)="changePanel(3)"></div>
+      </div>
+    </section>
+    <section id="wrapper">
+      <section id="one"></section>
+      <section id="two"></section>
+      <section id="three"></section>
+    </section>
+    <footer>
+
+    </footer>
+</div>

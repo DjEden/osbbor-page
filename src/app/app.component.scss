@@ -1,0 +1,196 @@
+$red: #cd0b0b;
+$gray: #989898;
+$black: black;
+$white: white;
+
+@mixin parallelogramma($base, $altezza, $angoloDiBase, $sfondo, $location) {
+	width:$base;
+	height:$altezza;
+	-moz-transform:skew($angoloDiBase) translate($location);
+	-webkit-transform:skew($angoloDiBase) translate($location);
+	-ms-transform:skew($angoloDiBase) translate($location);
+	-o-transform:skew($angoloDiBase) translate($location);
+    transform:skew($angoloDiBase) translate($location);
+	background:$sfondo;
+}
+
+.logo{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    width: calc(100% - 100px);
+    z-index: 9;
+
+    .image{
+        float: left;
+        width: 100px;
+        height: 100px;
+        
+        .left, .right, .center{
+            stroke: $red;
+            fill: $red;
+        }
+
+        .top, .bottom{
+            stroke: $gray;
+            fill: $gray;
+        }
+        
+    }
+
+    .name{
+        display: block;
+        float: left;
+        width: 300px;     
+        height: 100px;
+        fill: $white;
+        font-family: "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+        transform: translateX(-20%);
+    }
+
+    &.alternative{
+
+        .image{
+
+            .left, .right, .center, .top, .bottom{
+                stroke: $white;
+                fill: $white;
+            }
+
+        }
+
+    }
+
+}
+
+.btnInfo{
+    position: fixed;
+    display: block;
+    left: 50px;
+    bottom: 25%;
+    z-index: 3;
+
+    &.expand{
+        width: 220px;
+        height: 50px;
+        border-radius: 25px;
+        font-size: 24px;
+    }
+    
+}
+
+#page-wrapper{
+    background-color: $black;
+}
+
+#banner{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;    
+
+    .Option{
+
+        &.select{
+            position: relative;
+            width: 100%;
+            height: 100%;    
+            z-index: 2;
+
+            &.red{
+                background-color: $red;
+                color: $white;
+            }
+
+            &.black{
+                background-color: $black;
+                color: $white;
+            }
+
+            img{
+                height: 100vh;
+                width: 100vw;
+                opacity: 0.2;
+                z-index: 1;
+            }
+        
+            .OptionContent{
+                display: block;
+                position: absolute;
+                width: 50%;
+                bottom: 25%;
+                margin: 50px;
+            }
+            
+            .OptionContent .Title{
+                font-size: 4em;
+                margin-bottom: 60px;
+            }
+            
+            .OptionContent .Content{
+                font-size: 1.3em;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+        }
+
+        &.next{            
+            z-index: 5;
+            position: absolute;
+            top: 0px;
+            right: -300px;
+            overflow: hidden;
+
+            &.red2{
+                @include parallelogramma(50vw, 100vh, 30deg, $red, 0%);
+            }
+
+            &.black2{
+                @include parallelogramma(50vw, 100vh, 30deg, $black, 0%);
+            }
+        
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                opacity: 0.2;        
+                transform:skew(-30deg) translate(-30%);
+            }
+        }
+      
+    }
+
+    .Actions{
+        position: absolute;
+        display: block;    
+        bottom: 40px;
+        left: 50%;
+        height: 30px;   
+        transform: translateX(-50%);
+        z-index: 9;
+        
+        .rombo {
+            float: left;
+            width: 15px; 
+            height: 15px; 
+            margin: 5px 10px;
+            border: 3px solid $white; 
+            -webkit-transform: rotate(45deg) skew(15deg, 15deg);
+            -moz-transform: rotate(45deg) skew(15deg, 15deg);
+            -ms-transform: rotate(45deg) skew(15deg, 15deg);
+            -o-transform: rotate(45deg) skew(15deg, 15deg);
+            transform: rotate(45deg) skew(15deg, 15deg);
+            cursor: pointer;
+            transition: all 400ms ease-in;
+
+            &.select{
+                background-color: $white;
+            }
+       }
+    }
+}
+
